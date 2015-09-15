@@ -7,14 +7,12 @@
   <name>Xebium</name>
   <packaging>jar</packaging>
 
-  <description>
-    A Selenium fixture for FitNesse.
-  </description>
+  <description>first setup for integration test scripts.</description>
 
   <scm>
-    <connection>scm:git:git://github.com/xebia/Xebium.git</connection>
-    <developerConnection>scm:git:git@github.com:xebia/Xebium.git</developerConnection>
-    <url>scm:git:http://github.com/xebia/Xebium</url>
+    <connection>scm:git:git://github.com/manoharanRajesh/testTools.git</connection>
+    <developerConnection>scm:git:git@github.com:manoharanRajesh/testTools.git</developerConnection>
+    <url>scm:git:https://github.com/manoharanRajesh/testTools</url>
   </scm>
 
   <properties>
