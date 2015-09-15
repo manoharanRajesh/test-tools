@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+	<artifactId>xebium</artifactId>
+  <groupId>com.test.tool.xebia</groupId>
+  <version>0.1-SNAPSHOT</version>
+  <name>Xebium</name>
+  <packaging>jar</packaging>
+
+  <description>
+    A Selenium fixture for FitNesse.
+  </description>
+
+  <scm>
+    <connection>scm:git:git://github.com/xebia/Xebium.git</connection>
+    <developerConnection>scm:git:git@github.com:xebia/Xebium.git</developerConnection>
+    <url>scm:git:http://github.com/xebia/Xebium</url>
+  </scm>
+
+  <properties>
+    <!-- versions-->
+    <selenium.version>2.47.1</selenium.version>
+    <xebium.version>0.12</xebium.version>
+    <fitnesse.version>20150814</fitnesse.version>
+    <slf4j.version>1.6.4</slf4j.version>
+      <!-- Maven plugins-->
+
+
+
+    <!-- other system or environment  settings  -->
+    <third.party.browser></third.party.browser>
+    <fitnesse.port>8000</fitnesse.port>
+
+
+  </properties>
+  <dependencies>
+
+    <dependency>
+      <groupId>org.fitnesse</groupId>
+      <artifactId>fitnesse</artifactId>
+      <version>${fitnesse.version}</version>
+      <classifier>standalone</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-api</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-remote-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>xebium</artifactId>
+      <groupId>com.xebia.incubator</groupId>
+      <version>${xebium.version}</version>
+    </dependency>
+
+    <!-- runtime dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>
