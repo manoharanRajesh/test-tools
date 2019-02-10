@@ -1,0 +1,8 @@
+|script                                                       |
+|start browser|chrome|on url           |http://phptravels.net/|
+|do           |open  |on               |/                     |
+|ensure       |do    |waitForPageToLoad|on      |100000000     |
+|Search Flight                                                |
+
+
+[[click here][.FrontPage.ProjectSelenium.TestPage1]]

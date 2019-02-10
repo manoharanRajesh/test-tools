@@ -1,0 +1,1 @@
+call mvn mafia:stop -Prun

@@ -1,0 +1,16 @@
+|import                    |
+|com.xebia.incubator.xebium|
+|fitnesse.fixtures         |
+
+|library                |
+|selenium driver fixture|
+
+
+
+|System property setter fixture                     |
+|key                    |value                      |
+|webdriver.chrome.driver|./driver/${OS}/chromedriver.exe|
+
+|System property setter fixture                 |
+|key                |value                      |
+|webdriver.ie.driver|C:\elakkiya\xebium\maven-mafia-plugin\driver\${OS}\chromedriver|

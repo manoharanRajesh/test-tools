@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+	<artifactId>xebium</artifactId>
+  <groupId>com.test.tool.xebia</groupId>
+  <version>0.1-SNAPSHOT</version>
+  <name>Xebium</name>
+  <packaging>jar</packaging>
+
+  <description>first setup for integration test scripts.</description>
+
+  <properties>
+    <!-- versions-->
+    <selenium.version>3.0.1</selenium.version>
+    <xebium.version>0.12</xebium.version>
+    <fitnesse.version>20150814</fitnesse.version>
+    <slf4j.version>1.6.4</slf4j.version>
+    <!-- Maven plugins-->
+    <mafia.version>2.1.5</mafia.version>
+    <!-- other system or environment  settings  -->
+    <!-- browser types (firefox,iexplore,chrome ,opera). headless browser (phantomjs) -->
+    <third.party.browser>chrome</third.party.browser>
+    <operating.system>win</operating.system>
+    <fitnesse.port>9000</fitnesse.port>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.fitnesse</groupId>
+      <artifactId>fitnesse</artifactId>
+      <version>${fitnesse.version}</version>
+      <classifier>standalone</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-api</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-remote-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>xebium</artifactId>
+      <groupId>com.xebia.incubator</groupId>
+      <version>${xebium.version}</version>
+    </dependency>
+
+    <!-- runtime dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>run</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>mafia-maven-plugin</artifactId>
+            <groupId>nl.sijpesteijn.testing.fitnesse.plugins</groupId>
+            <version>${mafia.version}</version>
+            <configuration>
+              <!--Number of day history to store.-->
+              <retainDays>0</retainDays>
+              <!-- port number on which fitnesse run -->
+              <fitNessePort>${fitnesse.port}</fitNessePort>
+              <!-- Other setting that can be used in fitnesse wiki -->
+              <statics>
+                <static>!define TEST_SYSTEM {slim}</static>
+                <static>!define DRIVERS {${basedir}\}</static>
+                <static>!define BROWSER {${third.party.browser}}</static>
+                <static>!define OS {${operating.system}}</static>
+              </statics>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

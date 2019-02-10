@@ -1,0 +1,18 @@
+|import                    |
+|com.xebia.incubator.xebium|
+|fitnesse.fixtures         |
+
+|library                |
+|selenium driver fixture|
+
+
+
+|System property setter fixture                     |
+|key                    |value                      |
+|webdriver.chrome.driver|./driver/${OS}/chromedriver|
+
+|System property setter fixture                 |
+|key                |value                      |
+|webdriver.ie.driver|./driver/${OS}/chromedriver|
+
+

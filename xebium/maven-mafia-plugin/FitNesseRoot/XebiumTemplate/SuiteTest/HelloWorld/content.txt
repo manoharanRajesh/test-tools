@@ -1,0 +1,2 @@
+|script                                           |
+|start browser|${BROWSER}|on url|https://google.com|

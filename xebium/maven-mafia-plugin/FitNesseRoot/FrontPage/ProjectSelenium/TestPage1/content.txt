@@ -1,0 +1,15 @@
+| script | 
+| start browser| chrome | on url | http://phptravels.net/ |
+| do | open | on | / |
+|Click On My Account Sign Up|
+|set timeout to| 200000|
+|Enter First Name|
+|Enter Last Name|
+|Enter Phone Number|
+|Enter Email|
+|Enter Password|
+|Click On Submit|
+|Click On Home Button|
+
+
+
